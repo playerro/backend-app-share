@@ -87,6 +87,7 @@ class UserController extends ApiController
         $currentUser = $this->getCurrentUser();
         $this->checkUserExists($currentUser);
 
+        //TODO: вынести в сервис
         $image = $request->files->get('image');
         if (!$image) {
             return $this->respondValidationError('Отсутствует изображение.');

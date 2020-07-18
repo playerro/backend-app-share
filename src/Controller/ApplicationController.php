@@ -96,6 +96,8 @@ class ApplicationController extends ApiController
 
         $apps = $user->getApps();
         $belongs = false;
+
+        //TODO: refactor
         foreach ($apps as $app) {
             if ($app->getId() === $id) $belongs = true;
         }

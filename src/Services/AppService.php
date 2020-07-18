@@ -23,7 +23,7 @@ class AppService
     protected const STATUS_RUNNING = 'running';
     protected const STATUS_STOPPED = 'stopped';
     protected const STATUS_REMOVED = 'removed';
-    //TODO: вынести в параметры среды
+    //TODO: вынести константы и параметры
     protected const DOCKER_ROOT_FOLDER = '~';
     protected const STATIC_ROOT_FOLDER = '../static/apps';
 

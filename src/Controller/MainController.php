@@ -11,6 +11,8 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Process\Process;
 class MainController extends AbstractController
 {
+
+    //TODO: удалить ненужные методы из MainController
     /**
      * @Route("/main/form", methods={"GET"})
      * @return Response
@@ -19,12 +21,15 @@ class MainController extends AbstractController
 
         return $this->render('form.html.twig');
     }
+
+
     /**
      * @Route("/main/proccess", methods={"GET","POST"})
      * @param Request $request
      * @return Response
      */
     public function actionProccessForm( Request $request) {
+
         $name =  htmlspecialchars($request->request->get('docker'));
         $id = '12345';
         $image = 'schmunk42/yii2-app-basic';
